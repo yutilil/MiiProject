@@ -1,43 +1,32 @@
 /**
-* Template Name: Active
-* Template URL: https://bootstrapmade.com/active-bootstrap-website-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* 
+* Updated: 2024/12/25
+* Author: 大ゆっちド根性WEB制作
 */
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Roboto",  sans-serif;
-  --nav-font: "Lato",  sans-serif;
+  --default-font: "Noto Serif JP", sans-serif;
+  --heading-font: "Noto Serif JP", sans-serif;
+  --nav-font: "Noto Serif JP", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #34bf49; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff; 
+  --default-color: #212529;
+  --heading-color: #2d465e;
+  --accent-color: #c995c5;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #212529;  /* The default color of the main navmenu links */
-  --nav-hover-color: #34bf49; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #34bf49; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #212529;
+  --nav-hover-color: #c995c5;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #212529;
+  --nav-dropdown-hover-color: #c995c5;
 }
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f3f4f4;
@@ -52,18 +41,14 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: var(--heading-font);
 }
 
 a {
@@ -87,55 +72,36 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+/*--------------------------------------------------------------
+# 文字を一行ずつ表示
+--------------------------------------------------------------*/
+.catch_copy span{
+  transition: 1s;
+  opacity: 0;
+  transform: translateY(20px);
+  display: block;
+  margin: 30px;
+  color: var(--heading-color);
 }
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+.catch_copy span:first-child{
+  animation: catch_anime 1.4s forwards 1s;
 }
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
+.catch_copy span:nth-child(2){
+  animation: catch_anime 1.4s forwards 1.8s;
 }
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
+.catch_copy span:nth-child(3){
+  animation: catch_anime 1.4s forwards 2.8s;
 }
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
+.catch_copy span:nth-child(4){
+  animation: catch_anime 1.4s forwards 3.8s;
+}
+@keyframes catch_anime{
+  0%{
+    transform: tarnslateY(20px);
   }
-
-  100% {
-    transform: rotate(360deg);
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -160,10 +126,13 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: max(1rem,0.97917vw);
+  letter-spacing:.1em;
+  font-weight:500;
   margin: 0;
   font-weight: 300;
   color: var(--heading-color);
+  line-height:1.2;
 }
 
 .scrolled .header {
@@ -681,8 +650,7 @@ h6 {
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
-section,
-.section {
+section, .section {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
@@ -691,9 +659,7 @@ section,
 }
 
 @media (max-width: 1199px) {
-
-  section,
-  .section {
+  section, .section {
     scroll-margin-top: 66px;
   }
 }
@@ -721,25 +687,13 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .btn-get-started {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  border-radius: 30px;
-  padding: 8px 30px;
-  border: 2px solid transparent;
-  transition: 0.3s all ease-in-out;
-  font-size: 14px;
-}
-
-.about .btn-get-started:hover {
-  border-color: var(--accent-color);
-  background-color: transparent;
-  color: var(--accent-color);
-}
-
-.about h1 {
+.about .h1 {
   color: var(--heading-color);
-  font-size: 30px;
+  line-height:1.2;
+  letter-spacing:.4em;
+  font-weight:500;
+  text-align:center;
+  font-size:max(1.3rem,1.57917vw);
 }
 
 .about p {
@@ -775,21 +729,31 @@ section,
 --------------------------------------------------------------*/
 .about-2 .content {
   background-color: var(--surface-color);
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.about-2 .content-subtitle {
-  font-size: 15px;
-  margin-bottom: 10px;
-  display: block;
-  color: var(--default-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .about-2 .content-title {
-  color: var(--heading-color);
-  font-size: 22px;
-  margin-bottom: 30px;
+  padding:2.375vw 0;
+  line-height:2;
+  text-align:center;
+}
+
+.about-2 .content-title .h1 {
+  line-height:1.2;
+  letter-spacing:.4em;
+  font-weight:500;
+  color:#c995c5;
+  font-size:max(1.3rem,1.57917vw)
+}
+
+.about-2 .content-letter {
+  padding:0.575vw 0;
+  font-weight:400;
+  font-size:max(1rem,1.09375vw);
+  letter-spacing:normal;
+  text-align:center;
+  color: var(--default-color);
 }
 
 .about-2 p {
@@ -797,26 +761,228 @@ section,
   color: var(--default-color);
 }
 
-.about-2 .btn-get-started {
+/*--------------------------------------------------------------
+# Tabs Section
+--------------------------------------------------------------*/
+.tabs .content-title {
+  padding:2.375vw 0;
+  line-height:2;
+  text-align:center;
+}
+
+.tabs .content-title .h1 {
+  color: var(--heading-color);
+  line-height:1.2;
+  letter-spacing:.4em;
+  font-weight:500;
+  text-align:center;
+  font-size:max(1.3rem,1.57917vw);
+}
+
+.tabs .h2 {
+  padding:0.175vw 0;
+  font-weight:300;
+  font-size:max(0.8rem,0.89375vw);
+  letter-spacing:normal;
+  text-align:left;
+  color: var(--default-color);
+}
+
+.tabs .service-item .service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 4px;
+  position: relative;
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.tabs .service-item .service-contents h3 {
+  font-size: 16px;
+  color: var(--heading-color);
+}
+
+.tabs .service-item.link {
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+}
+
+.tabs .service-item.link .service-contents {
+  color: var(--default-color);
+}
+
+.tabs .service-item.link .service-contents *:last-child {
+  margin-bottom: 0;
+}
+
+.tabs .service-item.link:hover {
+  background: color-mix(in srgb, var(--default-color), transparent 96%);
+}
+
+.tabs .service-item.link:hover .service-icon {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+}
+
+.tabs .service-item.link.active {
+  background: var(--surface-color);
+}
+
+.tabs .service-item.link.active .service-icon {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.tabs .btn-get-started {
   background-color: var(--accent-color);
   color: var(--contrast-color);
   border-radius: 30px;
   padding: 8px 30px;
   border: 2px solid transparent;
   transition: 0.3s all ease-in-out;
-  font-size: 14px;
 }
 
-.about-2 .btn-get-started:hover {
+.tabs .btn-get-started:hover {
   border-color: var(--accent-color);
   background-color: transparent;
   color: var(--accent-color);
 }
 
-.about-2 .lead {
-  line-height: 1.6;
-  font-size: 18px;
-  font-weight: normal;
+.tabs .img-item{
+  display: flex;
+  justify-content: center;
+}
+
+/*--------------------------------------------------------------
+# notice Section
+--------------------------------------------------------------*/
+.notice .section-title{
+  padding-bottom: 20px
+}
+.notice .h2 {
+  font-size:max(0.8rem,0.89375vw);
+  letter-spacing:normal;
+  text-align:left;
+  margin-bottom: 10px;
+  display: block;
+  color: var(--default-color);
+}
+
+.notice p {
+  line-height: 1.7;
+  color: var(--default-color);
+}
+
+.notice-list{
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+
+.notice-list .notice-item a{
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: var(--heading-color);
+  border-bottom: 1px solid #CCC;
+  padding: 20px 20px;
+}
+
+.notice-list .notice-item:first-child a{
+  border-top: 1px solid #CCC;
+}
+
+.notice-list .notice-item .notice-date{
+  margin: 0;
+  min-width: 120px;
+  font-size: 16px;
+  color: #383838;
+  padding: 0 20px 0 0;
+}
+
+.notice-list .notice-item .notice-title{
+  margin: 0;
+  width: 100%;
+}
+
+.notice-list .notice-item a:hover .notice-title{
+  color: var(--nav-hover-color);
+}
+
+@media screen and (max-width: 767px){
+  .notice-list .notice-item a{
+    flex-wrap: wrap;
+  }
+  .notice-list .notice-item .notice-date{
+    min-width: 100px;
+  }
+  .notice-list .notice-item .notice-title{
+    margin-top: 10px;
+  }
+}
+
+.notice .custom-accordion .accordion-item {
+  background-color: var(--surface-color);
+  margin-bottom: 0px;
+  position: relative;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.notice .custom-accordion .accordion-item .btn-link {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  text-decoration: none;
+  text-align: left;
+  color: var(--default-color);
+  border: none;
+  padding-left: 40px;
+  border-radius: 0;
+  position: relative;
+  background-color: color-mix(in srgb, var(--default-color), transparent 94%);
+}
+
+.notice .custom-accordion .accordion-item .btn-link:before {
+  content: "\f282";
+  display: inline-block;
+  font-family: "bootstrap-icons" !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+
+.notice .custom-accordion .accordion-item .btn-link[aria-expanded=true] {
+  color: var(--accent-color);
+}
+
+.notice .custom-accordion .accordion-item .btn-link[aria-expanded=true]:before {
+  font-family: "bootstrap-icons" !important;
+  content: "\f286";
+  position: absolute;
+  color: var(--accent-color);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.notice .custom-accordion .accordion-item .accordion-body {
+  padding: 20px 20px 20px 20px;
   color: var(--default-color);
 }
 
@@ -995,61 +1161,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Tabs Section
---------------------------------------------------------------*/
-.tabs .service-item .service-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
-  border-radius: 4px;
-  position: relative;
-  color: var(--accent-color);
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
-  margin-right: 20px;
-  font-size: 16px;
-}
-
-.tabs .service-item .service-contents h3 {
-  font-size: 16px;
-  color: var(--heading-color);
-}
-
-.tabs .service-item.link {
-  padding: 20px;
-  margin-bottom: 10px;
-  border-radius: 7px;
-}
-
-.tabs .service-item.link .service-contents {
-  color: var(--default-color);
-}
-
-.tabs .service-item.link .service-contents *:last-child {
-  margin-bottom: 0;
-}
-
-.tabs .service-item.link:hover {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
-}
-
-.tabs .service-item.link:hover .service-icon {
-  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--default-color);
-}
-
-.tabs .service-item.link.active {
-  background: var(--surface-color);
-}
-
-.tabs .service-item.link.active .service-icon {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-/*--------------------------------------------------------------
 # Services 2 Section
 --------------------------------------------------------------*/
 .services-2 .content-subtitle {
@@ -1208,84 +1319,6 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
   color: var(--accent-color);
   border-radius: 50px;
-}
-
-/*--------------------------------------------------------------
-# Faq Section
---------------------------------------------------------------*/
-.faq .content-subtitle {
-  font-size: 15px;
-  margin-bottom: 10px;
-  display: block;
-  color: var(--default-color);
-}
-
-.faq .content-title {
-  color: var(--heading-color);
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.faq p {
-  line-height: 1.7;
-  color: var(--default-color);
-}
-
-.faq .custom-accordion .accordion-item {
-  background-color: var(--surface-color);
-  margin-bottom: 0px;
-  position: relative;
-  border-radius: 0px;
-  overflow: hidden;
-}
-
-.faq .custom-accordion .accordion-item .btn-link {
-  display: block;
-  width: 100%;
-  padding: 15px 0;
-  text-decoration: none;
-  text-align: left;
-  color: var(--default-color);
-  border: none;
-  padding-left: 40px;
-  border-radius: 0;
-  position: relative;
-  background-color: color-mix(in srgb, var(--default-color), transparent 94%);
-}
-
-.faq .custom-accordion .accordion-item .btn-link:before {
-  content: "\f282";
-  display: inline-block;
-  font-family: "bootstrap-icons" !important;
-  font-style: normal;
-  font-weight: normal !important;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  vertical-align: -0.125em;
-  -webkit-font-smoothing: antialiased;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 15px;
-}
-
-.faq .custom-accordion .accordion-item .btn-link[aria-expanded=true] {
-  color: var(--accent-color);
-}
-
-.faq .custom-accordion .accordion-item .btn-link[aria-expanded=true]:before {
-  font-family: "bootstrap-icons" !important;
-  content: "\f286";
-  position: absolute;
-  color: var(--accent-color);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.faq .custom-accordion .accordion-item .accordion-body {
-  padding: 20px 20px 20px 20px;
-  color: var(--default-color);
 }
 
 /*--------------------------------------------------------------
