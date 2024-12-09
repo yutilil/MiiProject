@@ -875,7 +875,7 @@ section, .section {
   color: var(--default-color);
 }
 
-.notice p {
+.notice p .notice-top p{
   line-height: 1.7;
   color: var(--default-color);
 }
@@ -884,17 +884,18 @@ section, .section {
   list-style: none outside;
   margin: 0;
   padding: 0;
-}
-
-.notice-top .notice-top-link {
   display: flex;
   flex-wrap: wrap;
   flex-wrap: nowrap;
   text-decoration: none;
 }
 
-.notice-top-item{
-  text-align: left;
+.notice-top-link a{
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: var(--default-color);
 }
 
 .notice-list{
