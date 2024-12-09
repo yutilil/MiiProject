@@ -880,6 +880,23 @@ section, .section {
   color: var(--default-color);
 }
 
+.notice-top{
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+
+.notice-top .notice-top-link {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  text-decoration: none;
+}
+
+.notice-top-item{
+  text-align: left;
+}
+
 .notice-list{
   list-style: none outside;
   margin: 0;
