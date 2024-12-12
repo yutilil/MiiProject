@@ -4,19 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>作品詳細</title>
+  <title>プロフィール</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@400;500;600;700;900&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Shippori+Mincho:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <!-- CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -26,7 +24,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="portfolio-details-page">
+<body class="profile-page">
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -37,29 +35,11 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">トップ</a></li>
+          <li><a href="index.html">トップ</a></li>
           <li><a href="portfolio.html">作品集</a></li>
-          <li class="dropdown"><a href="tech.html"><span>技法の紹介</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-              <!-- if use deep dropdown
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-            -->
-            </ul>
-          </li>
-          <li><a href="about.html">お知らせ</a></li>
-          <li><a href="team.html">プロフィール</a></li>
+          <li class="dropdown"><a href="tech.html"><span>技法の紹介</span></a></li>
+          <li><a href="notice.html">お知らせ</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
           <!-- <li><a href="blog.html">ブログ</a></li> -->
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
@@ -72,121 +52,122 @@
     <!-- Page Title -->
     <div class="page-title light-background">
       <div class="container">
-        <h1>Portfolio Details</h1>
+        <h1>プロフィール</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">トップ</a></li>
-            <li class="current">作品詳細</li>
+            <li class="current">プロフィール</li>
           </ol>
         </nav>
       </div>
     </div>
     <!-- End Page Title -->
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <div class="portfolio-details-slider swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/app-1.jpg" alt="">
+    <!-- Profile Section -->
+    <section id="profile" class="profile section">
+      <div class="container">
+        <div class="content">
+          <div class="row justify-content-center">
+            <!-- image -->
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 order-lg-2 offset-xl-0 mb-4" data-aos="fade-right" data-aos-delay="100"">
+              <div class="swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    },
+                    "breakpoints": {
+                      "320": {
+                        "slidesPerView": 1,
+                        "spaceBetween": 40
+                      },
+                      "1200": {
+                        "slidesPerView": 1,
+                        "spaceBetween": 1
+                      }
+                    }
+                  }
+                </script>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/img/profile/profile1.png" alt="Image" class="img-fluid">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/profile/profile2.png" alt="Image" class="img-fluid">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/profile/profile3.png" alt="Image" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/product-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/branding-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/books-1.jpg" alt="">
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="row justify-content-between gy-4 mt-4">
-          <div class="col-lg-8" data-aos="fade-up">
-            <div class="portfolio-description">
-              <h2>This is an example of portfolio details</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-              <p>
-                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
-              </p>
-
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <div>
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
+            <!-- letter -->
+            <div class="offset-md-0 offset-lg-0 col-sm-12 col-md-6 col-lg-6 col-xl-6" data-aos="fade-left">
+              <div class="content-title text-start">
+                <h2>
+                  染繍師 宮城美穂子
+                </h2>
+                <div class="content-letter">
+                  <table cellspacing="0" cellpadding="0" width="100%">
+                    <col width="100">
+                    <col width="800">
+                    <tr>
+                      <td valign="top">1978年</td>
+                      <td>新潟出身</td>
+                    </tr>
+                    <tr>
+                      <td valign="top">2002年</td>
+                      <td>京都精華大学大学院芸術研究科修士課程修了</td>
+                    </tr>
+                    <tr>
+                      <td valign="top">2002年</td>
+                      <td>「染司よしおか」入門。
+                        吉岡幸雄氏、福田伝士氏に師事。
+                        東大寺大仏開眼1250年法要に関する染織品の制作、東大寺及び薬師寺の伎楽装束制作、
+                        色彩再現制作等の仕事に従事しながら、約20年に渡り天然染料、天然顔料による染色、
+                        及び様々な古来より行われてきた染織技法についての知識技術を習得。
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">2004年</td>
+                      <td>独学にて日本刺繍を学び始める。</td>
+                    </tr>
+                    <tr>
+                      <td valign="top">2009年</td>
+                      <td>京繍伝統工芸士「京繍」杉下晃造氏・杉下陽子氏に師事。
+                        染司よしおかの仕事と並行して日本刺繍の技術習得に努め、呉服関連の刺繍職人としての仕事にも従事。
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">2023年</td>
+                      <td>作家として独立。
+                        すべての素材、色彩を天然の物のみを使用して染めと刺繍の作品を制作する日本刺繍作家・染繍師として活動を開始。
+                      </td>
+                    </tr>
+                  </table>
                 </div>
               </div>
-
-              <p>
-                Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus deserunt assumenda tempore. Delectus voluptas necessitatibus est.
-              </p>
-
-              <p>
-                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
-              </p>
-
-            </div>
-          </div>
-
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong> Web design</li>
-                <li><strong>Client</strong> ASU Company</li>
-                <li><strong>Project date</strong> 01 March, 2020</li>
-                <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
-                <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
-              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /Portfolio Details Section -->
+    <!-- /Profile Section -->
   </main>
 
   <footer id="footer" class="footer light-background">
     <div class="container">
       <div class="row g-4">
-        <div class="col-md-6 col-lg-6 mb-3 mb-md-0">
+        <div class="col-md-4 col-lg-4 mb-3 mb-md-0">
           <div class="widget">
             <h3 class="widget-heading">About Us</h3>
             <p class="mb-4">
@@ -197,7 +178,22 @@
             </p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-6 mb-3 mb-md-0">
+        <div class="col-md-4 col-lg-4 ps-lg-5 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading">Navigation</h3>
+            <ul class="list-unstyled float-start me-5">
+              <li><a href="#">トップ</a></li>
+              <li><a href="portfolio.html">作品集</a></li>
+              <li><a href="tech.html">技法の紹介</a></li>
+            </ul>
+            <ul class="list-unstyled float-start me-5">
+              <li><a href="notice.html">お知らせ</a></li>
+              <li><a href="profile.html">プロフィール</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-3 mb-md-0">
           <div class="widget">
             <h3 class="widget-heading">Connect</h3>
             <ul class="list-unstyled social-icons light mb-3">
@@ -214,7 +210,6 @@
           </div>
         </div>
       </div>
-
       <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Mihoko Miyagi</strong> <span>All Rights Reserved</span></p>
         <div class="credits">
@@ -226,10 +221,8 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
   <!-- Preloader -->
   <div id="preloader"></div>
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -239,10 +232,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>
