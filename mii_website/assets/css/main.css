@@ -872,7 +872,7 @@ section, .section {
   padding: 0.975vw 0;
   line-height: 1.5;
   text-align: left;
-  font-size: max(1.5rem,1.49375vw);
+  font-size: max(1.3rem,1.29375vw);
   letter-spacing: normal;
   text-align: left;
   margin-bottom: 10px;
@@ -962,13 +962,16 @@ section, .section {
 .notice-list .notice-item .notice-date{
   margin: 0;
   min-width: 120px;
-  font-size: max(1rem,0.99375vw);
+  font-size: max(0.9rem,0.89375vw);
   color: #383838;
-  padding: 0 20px 0 0;
+  padding: 0 2.375vw 0 0;
 }
 
 .notice-list .notice-item .notice-title{
   margin: 0;
+  min-width: 120px;
+  font-size: max(0.9rem,0.89375vw);
+  color: #383838;
   width: 100%;
 }
 
