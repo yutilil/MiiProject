@@ -780,8 +780,8 @@ section, .section {
 
 .tabs .h2 {
   padding:0.175vw 0;
-  font-weight:300;
-  font-size:max(0.8rem,0.89375vw);
+  font-weight:500;
+  font-size:max(1.0rem,0.99375vw);
   letter-spacing:normal;
   text-align:left;
   color: var(--default-color);
@@ -872,7 +872,7 @@ section, .section {
   padding: 0.975vw 0;
   line-height: 1.5;
   text-align: left;
-  font-size: max(1.3rem,1.29375vw);
+  font-size: max(1.0rem,0.99375vw);
   letter-spacing: normal;
   text-align: left;
   margin-bottom: 10px;
@@ -1465,7 +1465,7 @@ section, .section {
 .profile .content-letter{
   padding: 0.075vw 0;
   font-weight: 300;
-  font-size: max(0.9rem,0.89375vw);
+  font-size: max(0.8rem,0.79375vw);
   letter-spacing: normal;
   text-align: left;
   color: var(--default-color);
