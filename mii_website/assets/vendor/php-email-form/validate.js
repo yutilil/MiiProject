@@ -1,8 +1,3 @@
-/**
-* PHP Email Form Validation - v3.8
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
-*/
 (function () {
   "use strict";
 
@@ -21,9 +16,9 @@
         displayError(thisForm, 'The form action property is not set!');
         return;
       }
-      thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
+      //thisForm.querySelector('.loading').classList.add('d-block');
+      //thisForm.querySelector('.error-message').classList.remove('d-block');
+      //thisForm.querySelector('.sent-message').classList.remove('d-block');
 
       let formData = new FormData( thisForm );
 
@@ -72,14 +67,14 @@
       }
     })
     .catch((error) => {
-      displayError(thisForm, error);
+      //displayError(thisForm, error);
     });
   }
-
+/*
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
     thisForm.querySelector('.error-message').innerHTML = error;
     thisForm.querySelector('.error-message').classList.add('d-block');
   }
-
+*/
 })();
